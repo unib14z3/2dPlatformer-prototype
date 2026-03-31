@@ -4,10 +4,10 @@ extends Entity
 # declare property components here
 # eg movement, attack, gravity, dash etc..... 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if get_health() <= 0 :
 		die()
-		
+
 
 func die() -> void :
 	#animator.play("die")
@@ -20,7 +20,7 @@ func take_damage(val: float = 10) -> void:
 	self.health -= val
 	print("taking damaged, current health : ", get_health())
 
-func spawn(pos : Vector2):
+func spawn(_pos : Vector2):
 	#spawn dummy
 	#play spawn animation
 	pass

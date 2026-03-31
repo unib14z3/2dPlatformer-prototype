@@ -15,6 +15,7 @@ config/tags=PackedStringArray("experimental", "prototype")
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+boot_splash/autoload_on_startup=true
 
 [file_customization]
 

@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://du0vgh5hvha4f"]
 
-[ext_resource type="Script" uid="uid://ducomv6popaj4" path="res://Scripts/Entities/player.gd" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://ducomv6popaj4" path="res://Scripts/Entity/Entities/player.gd" id="1_kk10u"]
 [ext_resource type="PackedScene" uid="uid://65kivc1uecfl" path="res://scenes/Entities/entity_properties/gravity.tscn" id="2_dqkch"]
+[ext_resource type="Resource" uid="uid://dfp2d6kcatkps" path="res://Resources/PlayerStats.tres" id="2_ltljm"]
 [ext_resource type="Texture2D" uid="uid://dvmn18wnsp5ex" path="res://assets/DarkSamuraiAssets/DarkSamurai (64x64).png" id="2_onrkg"]
 [ext_resource type="PackedScene" uid="uid://cl010326h8q6s" path="res://scenes/Entities/entity_properties/movement.tscn" id="2_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://tig3xfge7n2v" path="res://Scripts/Properties/attack.tscn" id="4_kk10u"]
+[ext_resource type="PackedScene" uid="uid://tig3xfge7n2v" path="res://scenes/attack.tscn" id="4_kk10u"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4flbx"]
 radius = 6.0
@@ -335,7 +336,8 @@ animations = [{
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=108898190]
-script = ExtResource("1_4flbx")
+script = ExtResource("1_kk10u")
+stats = ExtResource("2_ltljm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=591260053]
 position = Vector2(0, 2)
@@ -353,6 +355,8 @@ shape = SubResource("CapsuleShape2D_kk10u")
 [node name="gravity" parent="properties" unique_id=968384272 instance=ExtResource("2_dqkch")]
 
 [node name="movement" parent="properties" unique_id=612100929 instance=ExtResource("2_qhqgy")]
+speed = 200.0
+jump_strength = 400.0
 
 [node name="attack" parent="properties" unique_id=1483088297 instance=ExtResource("4_kk10u")]
 
@@ -363,5 +367,3 @@ autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=96597273]
 zoom = Vector2(1.7, 1.7)
-
-[connection signal="body_entered" from="Hitbox" to="properties/attack" method="_on_hitbox_body_entered"]

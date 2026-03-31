@@ -1,11 +1,12 @@
 class_name  GravityComponent
-extends Node
+extends Component
 
-var player : CharacterBody2D
-var accleration : float = 980         
+var player : Entity
+@export var accleration : float = 980.0        
 
-func init(p: CharacterBody2D)-> void:
-	player = p
+func init(e:Entity) -> void:
+	player = e
+	status = true
 
 func process(_delta):
 	if not player.is_on_floor():

@@ -1,14 +1,15 @@
 class_name MovementComponent
-extends Node
+extends Component
 
 var player : Player
-@export_range(100,500) var base_speed : float = 200.0
-@export_range(200,600) var jump_strength : float = 400
-var status : bool
+@export var speed : float
+@export var jump_strength : float
 
-func init(p: CharacterBody2D) -> void:
-	player = p
+func init(e:Entity) -> void:
+	player = e
 	status = true
+	speed = player.stats.speed
+	jump_strength = player.stats.jump_strength
 
 func process(delta)->void:
 	if status:
@@ -33,7 +34,7 @@ func move(_delta) -> int:
 		player.animator.flip_h = true
 		player.hitbox.scale.x = -1
 		
-	player.velocity.x = dir * base_speed 
+	player.velocity.x = dir * speed 
 	# print("Movement direction :", dir, " velocity in x :",player.velocity.x)
 	
 	return error_code
@@ -45,12 +46,3 @@ func jump(_delta)->int:
 		#print("Jumped, velocity in y :",player.velocity.y)
 	
 	return error_code
-
-func disable():
-	status = false
-
-func enable():
-	status = true
-
-func toggle_status():
-	status = !status

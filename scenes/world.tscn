@@ -1,13 +1,12 @@
 [gd_scene format=4 uid="uid://5dha0ra43xcj"]
 
-[ext_resource type="Script" uid="uid://jlut7b6m2uko" path="res://Scripts/world.gd" id="1_4mrxx"]
+[ext_resource type="Script" uid="uid://jlut7b6m2uko" path="res://Scripts/others/world.gd" id="1_4mrxx"]
 [ext_resource type="Texture2D" uid="uid://by6yi7pf5sxbj" path="res://assets/prototype-2d-platformer-32x32/1 Tiles/Tileset1.png" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://c61beu2q8ixop" path="res://obstaclest.png" id="2_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://du0vgh5hvha4f" path="res://scenes/Entities/player.tscn" id="3_4wyf3"]
-[ext_resource type="Script" uid="uid://c2peb4p41u3cs" path="res://Scripts/kill_zone.gd" id="3_k0juu"]
-[ext_resource type="PackedScene" uid="uid://c4n788ehikesd" path="res://One way platforms/platform_16x160.tscn" id="5_71j4m"]
-[ext_resource type="PackedScene" uid="uid://cinsspnyry4b5" path="res://One way platforms/platform-16x32_1.tscn" id="6_qfnet"]
-[ext_resource type="PackedScene" uid="uid://drousdtb4jlfa" path="res://scenes/Entities/dummy.tscn" id="8_4mrxx"]
+[ext_resource type="Script" uid="uid://c2peb4p41u3cs" path="res://Scripts/others/kill_zone.gd" id="3_k0juu"]
+[ext_resource type="PackedScene" uid="uid://c4n788ehikesd" path="res://assets/One way platforms/platform_16x160.tscn" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://cinsspnyry4b5" path="res://assets/One way platforms/platform-16x32_1.tscn" id="6_qfnet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nnsk1"]
 texture = ExtResource("1_nnsk1")
@@ -244,6 +243,3 @@ position = Vector2(928, 416)
 [node name="Player" parent="." unique_id=1575877413 instance=ExtResource("3_4wyf3")]
 unique_name_in_owner = true
 position = Vector2(43, 334)
-
-[node name="Dummy" parent="." unique_id=1257170588 instance=ExtResource("8_4mrxx")]
-position = Vector2(192, 336)
