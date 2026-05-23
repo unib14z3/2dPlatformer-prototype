@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://du0vgh5hvha4f"]
 
-[ext_resource type="Script" uid="uid://ducomv6popaj4" path="res://Scripts/Entity/Entities/player.gd" id="1_kk10u"]
+[ext_resource type="Script" uid="uid://ducomv6popaj4" path="res://Scripts/Entity/Component/Entities/player.gd" id="1_kk10u"]
 [ext_resource type="PackedScene" uid="uid://65kivc1uecfl" path="res://scenes/Entities/entity_properties/gravity.tscn" id="2_dqkch"]
 [ext_resource type="Resource" uid="uid://dfp2d6kcatkps" path="res://Resources/PlayerStats.tres" id="2_ltljm"]
 [ext_resource type="Texture2D" uid="uid://dvmn18wnsp5ex" path="res://assets/DarkSamuraiAssets/DarkSamurai (64x64).png" id="2_onrkg"]
@@ -359,6 +359,8 @@ speed = 200.0
 jump_strength = 400.0
 
 [node name="attack" parent="properties" unique_id=1483088297 instance=ExtResource("4_kk10u")]
+
+[node name="buffs" type="Node" parent="." unique_id=789325660]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=37413942]
 sprite_frames = SubResource("SpriteFrames_7ahtn")

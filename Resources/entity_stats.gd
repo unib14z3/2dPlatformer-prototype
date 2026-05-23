@@ -3,15 +3,14 @@ extends Resource
 
 var Level : int = 1 
 var Max_XP : float = 100
-var Xp : float = 0
+var current_xp : float = 0
 
 # Vitality 
 @export var Base_Max_HEALTH : float = 100.0 
 @export var Base_DEFFENCE : float = 0.0
 var _health : float = 100.0 :
 	set(new_health):
-		_health = max(0,Base_Max_HEALTH
-		)
+		_health = max(0,Base_Max_HEALTH)
 	get:
 		return _health
 

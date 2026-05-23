@@ -8,9 +8,7 @@ var hitbox : Area2D
 func init(e):
 	entity = e
 	hitbox = entity.hitbox
-	
 	atk = entity.stats.attack
-
 
 func process(_delta):
 	slash_attack()

@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="5kD0etVeY8HZzzrFOYsF">
+    <mxGraphModel dx="693" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-2" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Entity" vertex="1">
+          <mxGeometry height="240" width="290" x="300" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-3" parent="xqchO0P8PVtfu2d8JmBR-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ animator : AnimatedSprite2D&lt;div&gt;+ hitbox : Area2D&lt;/div&gt;&lt;div&gt;+ start : EntityStats&amp;nbsp;&lt;/div&gt;&lt;div&gt;+&amp;nbsp;properties_folder : Node&lt;/div&gt;&lt;div&gt;+&amp;nbsp;components : Array[Component]&lt;/div&gt;" vertex="1">
+          <mxGeometry height="84" width="290" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-4" parent="xqchO0P8PVtfu2d8JmBR-2" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="290" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-5" parent="xqchO0P8PVtfu2d8JmBR-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&amp;nbsp;+ get_component(cName : String) : Component&lt;/div&gt;&lt;div&gt;&amp;nbsp;+&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ &lt;i&gt;die() : void&amp;nbsp;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;+&amp;nbsp;&lt;/i&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&lt;i&gt;get_health() : float&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp;+ &lt;i&gt;take_damage(_val : float = 0)&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&amp;nbsp;-&lt;/i&gt;&amp;nbsp;&lt;span style=&quot;background-color: transparent;&quot;&gt;_property_setup_fallback() : Node&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;&amp;nbsp;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;_load_components(properties)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="122" width="290" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-6" edge="1" parent="xqchO0P8PVtfu2d8JmBR-2" style="endArrow=classic;html=1;rounded=0;" target="xqchO0P8PVtfu2d8JmBR-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="140" y="240" as="sourcePoint" />
+            <mxPoint x="140" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-7" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Player" vertex="1">
+          <mxGeometry height="110" width="210" x="330" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-8" parent="xqchO0P8PVtfu2d8JmBR-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="26" width="210" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-9" parent="xqchO0P8PVtfu2d8JmBR-7" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="210" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="xqchO0P8PVtfu2d8JmBR-10" parent="xqchO0P8PVtfu2d8JmBR-7" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ take_damage(_val:float = 0)&lt;div&gt;+ die()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="210" y="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
