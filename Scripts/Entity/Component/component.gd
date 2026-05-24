@@ -1,16 +1,16 @@
 @abstract class_name Component
 extends Node
 
-@onready var status := true
+@export var _status := true
 
-@abstract func init(e:Entity) -> void 
-@abstract func process(delta) -> void
+@abstract func init(_e:Entity) -> void 
+@abstract func process(_delta) -> void
 
 func disable() -> void :
-	status = false
+	_status = false
 
 func enable() -> void :
-	status = true
+	_status = true
 
-func toggle_status():
-	status = !status
+func toggle__status():
+	_status = !_status

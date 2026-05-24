@@ -335,9 +335,11 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="player" type="CharacterBody2D" unique_id=108898190]
+[node name="player" type="CharacterBody2D" unique_id=108898190 node_paths=PackedStringArray("properties_folder", "buffs")]
 script = ExtResource("1_kk10u")
 stats = ExtResource("2_ltljm")
+properties_folder = NodePath("properties")
+buffs = NodePath("buffs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=591260053]
 position = Vector2(0, 2)

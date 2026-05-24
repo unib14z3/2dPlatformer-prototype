@@ -6,7 +6,7 @@ var player : Entity
 
 func init(e:Entity) -> void:
 	player = e
-	status = true
+	_status = true
 
 func process(_delta):
 	if not player.is_on_floor():

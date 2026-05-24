@@ -2,9 +2,10 @@
 extends CharacterBody2D
 
 # Stat Methods
+@abstract func get_stat(stat) -> float
 @abstract func die() -> void 
 @abstract func take_damage(_val:float = 0 ) -> void
-@abstract func get_health()
+
 
 # Core Components
 @onready var animator : AnimatedSprite2D = $AnimatedSprite2D
