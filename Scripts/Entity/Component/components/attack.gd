@@ -15,7 +15,6 @@ func process(_delta):
 
 func slash_attack():
 	if Input.is_action_just_pressed("attack"):
-		entity.animator.play("attack")
 		var bodies = hitbox.get_overlapping_bodies()
 		for body in bodies:
 			if (body is Entity) and (body is not Player):

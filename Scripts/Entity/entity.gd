@@ -6,7 +6,6 @@ extends CharacterBody2D
 @abstract func die() -> void 
 @abstract func take_damage(_val:float = 0 ) -> void
 
-
 # Core Components
 @onready var animator : AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox : Area2D = $Hitbox
@@ -30,6 +29,7 @@ func _load_components(properties) -> void :
 			print("component : ", c.name," is set")
 			components.append(c)
 
+
 func _property_setup_fallback() -> Node:
 	var _prop_folder = get_node_or_null("properties")
 	return _prop_folder
@@ -39,17 +39,17 @@ func _property_setup_fallback() -> Node:
 func _ready() -> void:
 	if properties_folder == null:
 		properties_folder = _property_setup_fallback()
-		
+	
 	if properties_folder == null:
 		push_error("No 'properties' node found on: " + name)
 		return
-		
+	
 	_load_components(properties_folder)
+
 
 func _physics_process(delta: float) -> void:
 	for c in components : if c is Component : c.process(delta)
 	move_and_slide()
-
 
 
 ## Searches for and returns a component by its node name.

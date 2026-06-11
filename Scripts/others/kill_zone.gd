@@ -5,7 +5,7 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Entity:
-		#print("body is entity killing body")
+		print("body is entity killing body")
 		body.die()
 	else:
 		#print("body is not of type entity")
